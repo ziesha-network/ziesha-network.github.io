@@ -15,6 +15,9 @@
     * {
       font-family: 'JetBrains Mono', monospace;
     }
+    p, h1, h2 {
+      padding: 0 10px;
+    }
     body {
       font-size: 0.9em;
     }
@@ -22,7 +25,7 @@
       margin: 1em 0 0 0;
     }
     p {
-      margin: 0.4em 0;
+      margin: 0.9em 0;
     }
     #menu span {
       font-size:1.2em;
@@ -31,9 +34,12 @@
     a {
       font:inherit;
       color:inherit;
+      text-decoration: underline;
+    }
+    #menu a {
       text-decoration: none;
     }
-    a:hover {
+    a:hover, #menu a:hover {
       font:inherit;
       color:inherit;
       text-decoration: underline;
@@ -45,55 +51,106 @@
       background: #333;
       background-image: linear-gradient(to right, #ccc, #333, #ccc);
     }
+    img {
+      background-color: white;
+    }
 
   </style>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
-  <h1 style="text-align: center;"><span style="font-size:1.2em">ℤ</span>eeka Network</h1>
+  <h1 style="text-align: center;">Zeeka Network</h1>
   <div style="text-align:center" id="menu">
-    <a target="_blank" rel="noopener noreferrer" href="https://discord.com"><span class='fab fa-discord'></span></a>|<a target="_blank" rel="noopener noreferrer" href="https://medium.com"><span class='fab fa-medium'></span></a>|<a target="_blank" rel="noopener noreferrer" href="https://github.com/zeeka-network/bazuka"><span class='fab fa-github'></span></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/4gbf9gZh8H"><span class='fab fa-discord'></span></a>|<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@zeeka-network"><span class='fab fa-medium'></span></a>|<a target="_blank" rel="noopener noreferrer" href="https://github.com/zeeka-network/bazuka"><span class='fab fa-github'></span></a>|<span><a href="index.html">En</a></span>|<span><a href="index_zh.html">中文</a></span>
   </div>
 
-  <div style="width: 40%; margin: 0 auto;">
+  <div style="max-width: 40em; margin: 0 auto;">
     <hr>
     <h2>What is Zeeka?</h2>
     <p>
-      In simplest words, Zeeka (ℤ) is a cryptocurrency which aims to provide a light and scalable blockchain using the help of Zero-Knowledge proof technology.
+      In simplest words, Zeeka (ℤ) is a cryptocurrency which aims to provide a light and scalable blockchain by extensively using the help of <b>Zero-Knowledge proof</b> technology.
     </p>
-    <h2>Zero-Knowledge proofs? What are they?</h2>
+    <div style="text-align:center; font-size:5em;">ℤ</div>
     <p>
-      Alice wants to prove Bob that she has the key of the door.
-    </p>
-    <div style="text-align:center">
-    <img style="width:50%;" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Zkip_alibaba1.png"/>
-    </div>
-    <h2>What is being proven?</h2>
-    <p>
-      We want to prove a big set of transactions have happened, changing the state of the blockchain from A to B, without showing the transactions.
-    </p>
-    <div style="text-align:center">
-    <img style="width:80%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hash_Tree.svg/800px-Hash_Tree.svg.png"/>
-    </div>
-    <h2>How can be a part of this?</h2>
-    <p>
-      Follow us on GitHub!
-    </p>
+      For detailed technical information, read the <a href="https://hackmd.io/@geusebetel/zeeka">Zeeka Whitepaper</a>! Also, we are actively developing the Zeeka project. Follow us on GitHub!</p>
     <div style="text-align:center; padding: 0.5em;">
       <a style="display:block; margin:0" class="github-button" href="https://github.com/zeeka-network" data-size="large" aria-label="Follow @zeeka-network on GitHub">Follow @zeeka-network</a>
     </div>
-    <h2>How does it work?</h2>
+    <h2>Huh? Zero-Knowledge proofs? 🤔</h2>
     <p>
-      Through facilitating zero-knowledge proof technology and its advances throughout this decade, a new blockchain infrastracture is introduced, in which batches of state transitions (Transactions) are compressed into constant-sized proofs of validity, and only those proofs are stored on the chain. A novel concept, called Zero Contracts is presented, which is the equivalent of Smart Contracts in some mainstream blockchains (Such as Ethereum), expressed in mathematical constraints, instead of bytecodes of an imaginary virtual machine (E.g. EVM). Integration of those ideas, which were previously used as privacy or layer-2 scaling solutions in other chains, inside the heart of a new blockchain, leads to a new network which is naturally more scalable and has better privacy for its users.
+      A Zero-Knowledge protocol is a crytographic method by which someone can prove that they know the <i><b>answer</b></i> of a <i><b>problem</b></i> without actually revealing it. A very good example of an interactive Zero-Knowledge proof is provided below:
     </p>
-    <h2>How can I invest?</h2>
     <p>
-      Keep in touch with us!
+      <i> - Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The <i><b>problem</b></i>), without uncovering Alice's eyes (Revealing the <i><b>answer</b></i>)?</i>
+    </p>
+    <div style="text-align:center">
+      <img style="width:80%;" src="colorblind.png"/>
+    </div>
+    <p>
+      Here is what Alice does:
+      <ul>
+        <li>She first hides the balls behind her back.</li>
+        <li>She shuffles the balls with a 50% chance.</li>
+        <li>She shows back the balls to Bob, and ask him: <i>- Did I shuffle the balls?</i></li>
+      </ul>
+    </p>
+    <div style="text-align:center">
+      <img style="width:80%;" src="shuffle.png"/>
+    </div>
+    <p>
+      If the balls are really different in colors, Bob would give Alice the correct answer. If he can't distinguish their colors, he still can give Alice a random answer, and his answer can still be correct. But the chances of giving a correct answer is 50%.
+    </p>
+    <p>
+      Alice repeats the procedure for 20 times. If the balls have same colors, the chances of Bob giving the correct answer all the 20 times is (1/2)^20 (Around 0.000001%). The probability is so tiny that Alice can conclude that Bob is really able to distinguish between the balls, leading to the conclusion that they really have different colors.
+    </p>
+    <h2>What are you trying to prove? 😐</h2>
+    <p>
+      Suppose there is a novel payment system that consists of a <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Merkle_tree">merkle tree</a> in which every leaf represents an <b>account</b> (A public key and a balance). We define the <b>state</b> of the system as the merkle root of this tree.
+    </p>
+    <div style="text-align:center">
+    <img style="width:60%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hash_Tree.svg/800px-Hash_Tree.svg.png"/>
+    </div>
+    <p>
+      We want to prove a big set of transactions have happened, changing the state of the system from A to B  (The <i><b>problem</b></i>), without showing the transactions (The  <i><b>answer</b></i>).
+    </p>
+    <p>
+      Now, here is the mind blowing fact:
+    </p>
+    <p>
+      The <i><b>proof</b></i> that you provide is constant in size, no matter how big the <i><b>answer</b></i> is. E.g the <i><b>answer</b></i> can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized <i><b>proof</b></i> is enough to convince everyone that the state transition is valid! 🤯
+    </p>
+
+    <h2>Ehmmm, Ethereum already has this with zkRollups? 🙄</h2>
+    <p>
+      <img style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (I.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
+    </p>
+
+    <p>
+      Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Zeeka nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain that its tip state is not available, worths nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
+    </p>
+
+    <h2>Okay, how are you going to handle smart-contracts? 😉</h2>
+    <p>
+      The equivalent of a Smart Contract in Zeeka blockchain is a <i><b>Zero Contract</b></i>. The contracts in Zeeka blockchain are not written for a specific virtual-machine (Like EVM), but written in <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649"><b>R1CS</b></a> (Which is the building block of zkSNARK circuits).
+    </p>
+    <div style="text-align:center; margin: 2em">
+    <img style="width:60%;" src="r1cs.png"/>
+    </div>
+    <p>
+      In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thausands of transactions).
+    </p>
+
+    <h2>How can I be a part of this? ❤️</h2>
+    <p>
+      Follow us on GitHub! Contribute to the project either by coding or promoting it. 💸
     </p>
     <hr>
-    <div style="text-align:center" id="menu">
-      Made with love - 2022
+    <div style="text-align:center;margin:2em" id="menu">
+      <a href="terms.html" style="font-size:0.8em">Terms and Conditions</a>
+      <br>
+      <br>
+      Made with ♥ and ₿ - 2022
     </div>
   </div>
 </body>
