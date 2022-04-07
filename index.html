@@ -71,8 +71,9 @@
     <p>
       In simplest words, Zeeka (ℤ) is a cryptocurrency which aims to provide a light and scalable blockchain by extensively using the help of <b>Zero-Knowledge proof</b> technology.
     </p>
+    <div style="text-align:center; font-size:5em;">ℤ</div>
     <p>
-      For detailed and technical information, read the <a href="https://hackmd.io/@keyvank/zeeka">Zeeka Whitepaper</a>! Also, we are actively developing the Zeeka project. Follow us on GitHub!</p>
+      For detailed technical information, read the <a href="https://hackmd.io/@keyvank/zeeka">Zeeka Whitepaper</a>! Also, we are actively developing the Zeeka project. Follow us on GitHub!</p>
     <div style="text-align:center; padding: 0.5em;">
       <a style="display:block; margin:0" class="github-button" href="https://github.com/zeeka-network" data-size="large" aria-label="Follow @zeeka-network on GitHub">Follow @zeeka-network</a>
     </div>
@@ -120,9 +121,23 @@
       The <i><b>proof</b></i> that you provide is constant in size, no matter how big the <i><b>answer</b></i> is. E.g the <i><b>answer</b></i> can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized <i><b>proof</b></i> is enough to convince everyone that the state transition is valid! 🤯
     </p>
 
-    <h2>How can be a part of this?</h2>
+    <h2>Ehmmm, Ethereum already has this with zkRollups? 🙄</h2>
     <p>
-      Follow us on GitHub! Contribute to the project either by coding or promoting it. Investment are also welcome. Keep in touch with me on Telegram :)
+      <img style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (I.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
+    </p>
+
+    <p>
+      Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Zeeka nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain that its tip state is not available, worths nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
+    </p>
+
+    <h2>Okay, how are you going to handle smart-contracts? 😉</h2>
+    <p>
+      The equivalent of a Smart Contract in Zeeka blockchain is a Zero Contract. The contracts in Zeeka blockchain are not written for a specific virtual-machine (Like EVM), but written in R1CS (Which is the building block of zkSNARK circuits). In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thausands of transactions).
+    </p>
+
+    <h2>How can I be a part of this?</h2>
+    <p>
+      Follow us on GitHub! Contribute to the project either by coding or promoting it. Investments are also welcome. Keep in touch with me on Telegram :)
       <span class="fab fa-telegram"></span> <a href="https://t.me/keyvankambakhsh">@keyvankambakhsh</a>
     </p>
     <hr>
