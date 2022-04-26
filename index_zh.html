@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Zeeka Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <style>
+    * {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    p, h1, h2 {
+      padding: 0 10px;
+    }
+    body {
+      font-size: 0.9em;
+    }
+    h2 {
+      margin: 1em 0 0 0;
+    }
+    p {
+      margin: 0.9em 0;
+    }
+    #menu span {
+      font-size:1.2em;
+      padding:0 20px;
+    }
+    a {
+      font:inherit;
+      color:inherit;
+      text-decoration: underline;
+    }
+    #menu a {
+      text-decoration: none;
+    }
+    a:hover, #menu a:hover {
+      font:inherit;
+      color:inherit;
+      text-decoration: underline;
+    }
+    hr {
+      margin: 3em;
+      border: 0;
+      height: 1px;
+      background: #333;
+      background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    }
+    img {
+      background-color: white;
+    }
+
+  </style>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <h1 style="text-align: center;"><span style="font-size:1.2em">ℤ</span>eeka Network</h1>
+  <div style="text-align:center" id="menu">
+    <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/4gbf9gZh8H"><span class='fab fa-discord'></span></a>|<a target="_blank" rel="noopener noreferrer" href="https://medium.com"><span class='fab fa-medium'></span></a>|<a target="_blank" rel="noopener noreferrer" href="https://github.com/zeeka-network/bazuka"><span class='fab fa-github'></span></a>|<span><a target="_blank" rel="noopener noreferrer" href="index.html">En</a></span>|<span><a target="_blank" rel="noopener noreferrer" href="index_zh.html">中文</a></span>
+  </div>
+
+  <div style="max-width: 40em; margin: 0 auto;">
+    <hr>
+    <h2>什么是 Zeeka?</h2>
+    <p>
+      简而言之, Zeeka (ℤ) 是一个基于<a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">零知识证明</a>的新世代区块链, 致力于提供一个轻型，迅捷且易于扩展的解决方案。
+    </p>
+    <div style="text-align:center; font-size:5em;">ℤ</div>
+    <p>
+      关于更多的技术细节，请关注<a href="https://hackmd.io/@keyvank/zeeka">Zeeka 白皮书</a>! 并且在现阶段，Zeeka团队处于积极的开发状态。请在Github上关注我们！</p>
+    <div style="text-align:center; padding: 0.5em;">
+      <a style="display:block; margin:0" class="github-button" href="https://github.com/zeeka-network" data-size="large" aria-label="Follow @zeeka-network on GitHub">Follow @zeeka-network</a>
+    </div>
+    <h2>什么是零知识证明? 🤔</h2>
+    <p>
+      零知识协议是一种通过密码学的方式来向他人证明<i><b>答案</b></i> 的正确性和计算完整性，并且是在<i><b>不泄露</b></i > 自己是<i><b>如何得到这个答案</b></i> 的前提下完成的。它的创始人Goldwasser，Micali，Rackoff等人在1993年获得Gödel prize 哥德尔奖，2012年获得图灵奖。并且在后人不断的完善下实现了不需要可信设置、可扩展的零知识证明协议 下面会用一个简单的例子说明交互式的零知识证明是如何工作的:
+    </p>
+    <p><i> - 为了方便描述，我们先引入两个角色: Alice和Bob. </i></p>
+    <p>
+      <i> - Alice现在被蒙上了双眼, 她的左右手✋🏻分别有一个球。Bob能够看到Alice双手上的球，这时Bob声称Alice左右手的球是不同颜色的。那么现在问题来了，Alice不相信Bob的说法。那么在不掀开Alice的眼罩作为前提的条件下， Bob如何才能说服Alice， 她双手🙌🏻上的球颜色是不同的呢？(<i><b>问题</b></i>) </i>
+    </p>
+    <div style="text-align:center">
+      <img style="width:80%;" src="colorblind.png"/>
+    </div>
+    <p>
+      Alice可以这么配合Bob来做:
+      <ul>
+        <li>Alice将所有的球藏在她的背后.</li>
+        <li>Alice有50%的几率选择交换俩个手里的球或者不交换.</li>
+        <li>Alice将球再次展示给Bob, 问:<i>-我交换手里的球了吗？</i></li>
+      </ul>
+    </p>
+    <div style="text-align:center">
+      <img style="width:80%;" src="shuffle.png"/>
+    </div>
+    <p>
+      如果球真的是不同的颜色，Bob会给Alice一个正确的答案。如果Bob不知道两球的颜色是否一样，他也可以随便给Alice一个答案，并且Bob随机给出的答案有可能是正确的，但是正确的几率只有50%.
+    </p>
+    <p>
+      50%是一个很高的几率能使Bob蒙混过关。为了降低这个概率，Alice可以重复上面👆🏻三个步骤20次。如果两球有相同的颜色，Bob给出所有20次的正确答案的概率是(1/2)^20 (大约 0.000001%)。这时Bob能够蒙混过关的几率已经很小了, 所以Alice能够判断出Bob是否真的知道<i><b>两球的颜色是否相同</b></i>。
+    </p>
+    <h2>你们想要做什么呢? 😐</h2>
+    <p>
+      假设有一个由<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Merkle_tree">merkle tree🌲</a>组成的新型支付系统，其中树🌲的每个子节点都代表了一个账户(public key和余额)。我们定义树🌲的根节点为整个支付系统的<b>状态</b>。
+    </p>
+    <div style="text-align:center">
+    <img style="width:60%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hash_Tree.svg/800px-Hash_Tree.svg.png"/>
+    </div>
+    <p>
+      我们想要证明的是在这个支付系统中发生了大量的交易时，整个系统的状态从 A 变到了 B( <i><b>问题</b></i>), 并且是在不暴露任何交易细节的前提下完成的( <i><b>答案</b></i>)。
+    </p>
+    <p>
+      至此，庐山真面目:
+    </p>
+    <p>
+      不论想要证明的答案有多大，或者说有多少笔交易想要证明，这时需要提供的<i><b>证明</b></i>的大小是个常量。举个例子来说，现在系统中发生了一百万次交易，但是不用展示出这么多的交易，只需要提供一个常量大小的<i><b>证明</b></i>就足以说服所有人，这些交易是验证过的. 🤯
+    </p>
+
+    <h2>但是Ehmmm, Ethereum 已经有zkRollups了呀? 🙄</h2>
+    <p>
+      <img style="width:5em; margin:1em" align="right" src="eth.png"/>确实是这样ETH已经有了zkRollups, 但是两者之间有着很大的不同. 在 <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>中, 存在着一个中心化的<i><b>操作</b></i>，只有主链能够发布零知识证明，在这种情况下如果主链发生了一些故障导致不能正常发布证明，那么整个系统会回滚到上一个状态。这也可以部分归咎于这个方案复杂的设计。
+    </p>
+
+    <p>
+      区块链中像是Ethereum或者Bitcoin，它们不选择保留一个个<i><b>SNARK 状态</b></i>，而是强制地使链上历史数据具有可用性。Zeeka节点和验证节点实现了一种方式，只接收披露中最新块的系统状态来作为分叉。这样意味着它们会检查提供的状态哈希结果是否在最新块中的。同样地，结构性的数据会保证最新块的状态是永远可以被压缩的. 所以一个更长的恶意子链他的状态是不可用的，不会被所有节点接受。这样子就消除了上述的复杂性，也为一些创意创造了空间。
+    </p>
+
+    <h2>那么，你们准备如何处理智能合约呢? 😉</h2>
+    <p>
+      不得不说智能合约是区块链的一大亮点。在Zeeka区块链中与智能合约相对应的是<i><b>Zero Contract</b></i>。Zeeka区块链中的合约不是写给指定的虚拟机的(比如EVM), 而是构建成<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649"><b>R1CS</b></a>来作为构建区块的zkSNARK电路图来使用的。
+    </p>
+    <div style="text-align:center; margin: 2em">
+    <img style="width:60%;" src="r1cs.png"/>
+    </div>
+    <p>
+      在这种情况下，程序员能够上传一个代表合约的，验证过的key, 当然这个合约可以由好几个电路图组成，之后就可以在链上轻松的运行这些电路图，进而将整个系统在发生大量交易时的状态转移封装进一个很小的交易。
+    </p>
+
+    <h2>热烈欢迎👏🏻 ❤️</h2>
+    <p>
+      关注我们的Github! 不限于提交代码或者促进Zeeka生态。💸Zeeka项目目前处在筹资阶段，欢迎电报联系:)
+      <span class="fab fa-telegram"></span> <a href="https://t.me/peterzzk">@peterzzk</a>
+    </p>
+    <hr>
+    <div style="text-align:center;margin:2em" id="menu">
+      Made with ♥ and ₿ - 2022
+    </div>
+  </div>
+</body>
+</html>
