@@ -123,11 +123,11 @@
 
     <h2>Ehmmm, Ethereum already has this with zkRollups? 🙄</h2>
     <p>
-      <img style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (I.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
+      <img style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (i.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
     </p>
 
     <p>
-      Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Zeeka nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain that its tip state is not available, worths nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
+      Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Zeeka nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain whose tip state is not available is worth nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
     </p>
 
     <h2>Okay, how are you going to handle smart-contracts? 😉</h2>
@@ -138,7 +138,7 @@
     <img style="width:60%;" src="r1cs.png"/>
     </div>
     <p>
-      In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thausands of transactions).
+      In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thousands of transactions).
     </p>
 
     <h2>How can I be a part of this? ❤️</h2>
