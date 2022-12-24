@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="ziesha network,ziesha,project,cryptocurrency,zero knowledge proofs,zksnarks">
+  <meta name="description" content="Ziesha is a new layer-1 cryptocurrency which uses Zero-Knowledge proofs as the back-end of its smart-contracts, focusing on a more scalable (Yet maintainable) blockchain by compressing transactions through zkRollup-like circuits."/>
 
   <title>Ziesha Network</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,7 +89,7 @@
       <i> - Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The <i><b>problem</b></i>), without uncovering Alice's eyes (Revealing the <i><b>answer</b></i>)?</i>
     </p>
     <div style="text-align:center">
-      <img style="width:80%;" src="colorblind.png"/>
+      <img alt="Alice and Bob while Alice has two balls in her hands" style="width:80%;" src="colorblind.png"/>
     </div>
     <p>
       Here is what Alice does:
@@ -99,7 +100,7 @@
       </ul>
     </p>
     <div style="text-align:center">
-      <img style="width:80%;" src="shuffle.png"/>
+      <img alt="Alice asking Bob if she shuffled the balls" style="width:80%;" src="shuffle.png"/>
     </div>
     <p>
       If the balls are really different in colors, Bob would give Alice the correct answer. If he can't distinguish their colors, he still can give Alice a random answer, and his answer can still be correct. But the chances of giving a correct answer is 50%.
@@ -112,7 +113,7 @@
       Suppose there is a novel payment system that consists of a <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Merkle_tree">merkle tree</a> in which every leaf represents an <b>account</b> (A public key and a balance). We define the <b>state</b> of the system as the merkle root of this tree.
     </p>
     <div style="text-align:center">
-    <img style="width:60%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hash_Tree.svg/800px-Hash_Tree.svg.png"/>
+    <img alt="A merkle-tree with 8 leaves" style="width:60%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hash_Tree.svg/800px-Hash_Tree.svg.png"/>
     </div>
     <p>
       We want to prove a big set of transactions have happened, changing the state of the system from A to B  (The <i><b>problem</b></i>), without showing the transactions (The  <i><b>answer</b></i>).
@@ -126,7 +127,7 @@
 
     <h2>Ehmmm, Ethereum already has this with zkRollups? 🙄</h2>
     <p>
-      <img style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (I.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
+      <img alt="Ethereum logo" style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (I.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
     </p>
 
     <p>
@@ -138,7 +139,7 @@
       The equivalent of a Smart Contract in Ziesha blockchain is a <i><b>Zero Contract</b></i>. The contracts in Ziesha blockchain are not written for a specific virtual-machine (Like EVM), but written in <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649"><b>R1CS</b></a> (Which is the building block of zkSNARK circuits).
     </p>
     <div style="text-align:center; margin: 2em">
-    <img style="width:60%;" src="r1cs.png"/>
+    <img alt="R1CS circuit equations. A*B+C=0" style="width:60%;" src="r1cs.png"/>
     </div>
     <p>
       In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thausands of transactions).
