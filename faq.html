@@ -120,7 +120,65 @@
 
     <h2>What is the difference between <b>zsend</b> and <b>rsend</b> transactions?</h2>
     <p>
-      Lorem ipsum dolor sit amet.
+      <i>rsend</i> transactions are vanilla transactions that are stored directly
+      on the blockchain database. <i>zsend</i> transactions are supposed to run
+      on the Main Payment Network. They are not stored on the blockchain database,
+      but their side-effects are. This makes them lighter and more effecient compared
+      to <i>rsend</i> transactions.
+    </p>
+
+    <h2>What is the difference between <b>zsend</b> and <b>rsend</b> transactions?</h2>
+    <p>
+      <i>rsend</i> transactions are vanilla transactions that are stored directly
+      on the blockchain database. <i>zsend</i> transactions are supposed to run
+      on the Main Payment Network. They are not stored on the blockchain database,
+      but their side-effects are. This makes them lighter and more effecient compared
+      to <i>rsend</i> transactions.
+    </p>
+
+    <h2>What consensus algorithm does Ziesha use?</h2>
+    <p>
+      In the main chain, the consensus is achieved through Proof-of-Work using
+      Monero’s brilliant RandomX hash function, which is proven to be most
+      efficient on regular CPUs.
+    </p>
+
+    <h2>Does Ziesha support smart-contracts?</h2>
+    <p>
+      Yes, though smart-contracts in Ziesha are considerably different with
+      smart-contract in other cryptocurrencies. Ziesha uses Zero-Knowledge proofs
+      as the back-end of its smart-contracts, which means, the smart-contracts
+      are expressed by mathematical constraints instead of bytecodes of a Virtual
+      Machine (E.g EVM).
+    </p>
+    <p>
+      In this scheme The programmer is supposed to upload the verification keys
+      of his R1CS contract (which can consist of multiple circuits) to the
+      blockchain, and anyone can invoke these circuits and move from one state
+      to another with a single transaction (Which could be just a compressed
+      version of thousands of transactions).
+    </p>
+    <p>
+      Curious about Zero-Knowledge proof circuits? Read Vitalik Buterin's great
+      article on Quadratic Arithmetic Programs:
+      <a href="https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649">Quadratic Arithmetic Programs: from Zero to Hero | by Vitalik Buterin</a>
+    </p>
+
+    <h2>What proving system does Ziesha use?</h2>
+    <p>
+      Ziesha uses Groth16 zkSNARK protocol which is one of the most widely used
+      and standardized Zero-Knowledge proof protocols out there. It has been
+      carefully audited and used by several famous projects including Zcash and
+      Filecoin.
+    </p>
+    <p>
+      Groth16 is a pairing-based zkSNARK protocol, requiring trusted setups, and
+      having the smallest proofs compared to all other Zero-Knowledge proof
+      protocols out there.
+    </p>
+    <p>
+      Read more:
+      <a href="https://www.zeroknowledgeblog.com/index.php/groth16">Groth16 | The Zero Knowledge Blog</a>
     </p>
     <hr>
     <div style="text-align:center;margin:2em" id="menu">
