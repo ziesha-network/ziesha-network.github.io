@@ -13,6 +13,11 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://ziesha.network/faq.html</loc>
+  <lastmod>2022-04-26T08:34:44+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
   <loc>https://ziesha.network/index.html</loc>
   <lastmod>2022-04-26T08:34:44+00:00</lastmod>
   <priority>0.80</priority>
