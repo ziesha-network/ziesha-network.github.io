@@ -93,7 +93,7 @@
     </div>
     <h2>Huh? Zero-Knowledge proofs? 🤔</h2>
     <p>
-      A Zero-Knowledge protocol is a crytographic method by which someone can prove that they know the <i><b>answer</b></i> of a <i><b>problem</b></i> without actually revealing it. A very good example of an interactive Zero-Knowledge proof is provided below:
+      A Zero-Knowledge protocol is a cryptographic method by which someone can prove that they know the <i><b>answer</b></i> to a <i><b>problem</b></i> without actually revealing it. A very good example of an interactive Zero-Knowledge proof is provided below:
     </p>
     <p>
       <i> - Suppose Alice is blindfolded and has two balls in her hands. Bob, who is able to see the balls, claims that the balls are different in colors. Alice doesn't trust Bob. How can Bob convince Alice that the balls have different colors (The <i><b>problem</b></i>), without uncovering Alice's eyes (Revealing the <i><b>answer</b></i>)?</i>
@@ -132,16 +132,16 @@
       Now, here is the mind blowing fact:
     </p>
     <p>
-      The <i><b>proof</b></i> that you provide is constant in size, no matter how big the <i><b>answer</b></i> is. E.g the <i><b>answer</b></i> can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized <i><b>proof</b></i> is enough to convince everyone that the state transition is valid! 🤯
+      The <i><b>proof</b></i> that you provide is constant in size, no matter how big the <i><b>answer</b></i> is. E.g. the <i><b>answer</b></i> can be millions of transactions, but you don't need to show them for the state transition to happen. A constant sized <i><b>proof</b></i> is enough to convince everyone that the state transition is valid! 🤯
     </p>
 
     <h2>Ehmmm, Ethereum already has this with zkRollups? 🙄</h2>
     <p>
-      <img alt="Ethereum logo" style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://ethereum.org/en/developers/docs/scaling/zk-rollups/">zkRollups</a>, there is a centeralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (I.e gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
+      <img alt="Ethereum logo" style="width:5em; margin:1em" align="right" src="eth.png"/>You got us! But hey, there is a big difference. In <a target="_blank" rel="noopener noreferrer" href="https://ethereum.org/en/developers/docs/scaling/zk-rollups/">zkRollups</a>, there is a centralized <i><b>operator</b></i>, constantly publishing Zero-Knowledge proofs on the main chain, and in case the operator stops doing this (i.e. gets unavailable), the chain will roll back to a previous state, from which some other operator is able to build on. This is a huge amount of complexity.
     </p>
 
     <p>
-      Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Ziesha nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain that its tip state is not available, worths nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
+      Blockchains like Ethereum/Bitcoin, enforce data-availability of the chain history, and not a SNARK state. Ziesha nodes and validators are implemented in a way to only accept forks that reveal the chain state of their last block, meaning that they will check if the hash of the provided state results in the state-hash submitted on the last block. This mechanism makes sure that the compressed state of the last block is always available. A longer subchain whose tip state is not available, worth nothing and is not accepted by the network. This removes the mentioned complexities by a great deal and creates room for some creativity as well.
     </p>
 
     <h2>Okay, how are you going to handle smart-contracts? 😉</h2>
@@ -152,7 +152,7 @@
     <img alt="R1CS circuit equations. A*B+C=0" style="width:60%;" src="r1cs.png"/>
     </div>
     <p>
-      In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thausands of transactions).
+      In this scheme, the programmer uploads the verifying keys of his R1CS contract (Which can consist of multiple circuits) on the blockchain and people could easily invoke these circuits and move from one state into another with a single small transaction (Which could be a compressed version of thousands of transactions).
     </p>
 
     <h2>How can I be a part of this? ❤️</h2>
